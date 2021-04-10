@@ -1,0 +1,158 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h3 {
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.875rem;
+}
+
+.background-img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 33%;
+  background: url("https://images.unsplash.com/photo-1617879463546-245ea07bb0d0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.container {
+  width: 60%;
+  height: 33%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .title {
+  text-align: center;
+}
+
+.container .underline {
+  margin-top: 5px;
+  height: 2px;
+  width: 180px;
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(29%, #323232), color-stop(57%, rgba(59, 58, 58, 0.75)), to(rgba(168, 168, 168, 0.1)));
+  background: linear-gradient(90deg, black 0%, #323232 29%, rgba(59, 58, 58, 0.75) 57%, rgba(168, 168, 168, 0.1) 100%);
+}
+
+.container .blocks {
+  position: absolute;
+  top: 30%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.container .blocks .block {
+  /*    background: green;*/
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 15px -8px #000000;
+          box-shadow: 0px 0px 15px -8px #000000;
+}
+
+.container .blocks .block .block-title {
+  padding: 0.75rem 1rem;
+  background: rgba(31, 31, 31, 0.9);
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container .blocks .block .block-content {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.container .blocks .block .btn {
+  border-radius: 75px;
+  background: #40d1f7;
+  padding: 0.3rem 0;
+  display: block;
+  margin: 0 auto 1rem;
+  color: #fff;
+  width: 50%;
+}
+
+.container .blocks .block:last-of-type {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /*    background: red*/
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+    padding-bottom: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .underline {
+    margin: 5px auto;
+    background: #a8a8a8;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(168, 168, 168, 0.1)), color-stop(29%, #323232), color-stop(47%, black), color-stop(65%, rgba(59, 58, 58, 0.75)), to(rgba(168, 168, 168, 0.1)));
+    background: linear-gradient(90deg, rgba(168, 168, 168, 0.1) 0%, #323232 29%, black 47%, rgba(59, 58, 58, 0.75) 65%, rgba(168, 168, 168, 0.1) 100%);
+  }
+  .container .blocks {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .background-img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url("https://images.unsplash.com/photo-1617879463546-245ea07bb0d0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1617879463546-245ea07bb0d0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .container .blocks {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+/*# sourceMappingURL=main.css.map */

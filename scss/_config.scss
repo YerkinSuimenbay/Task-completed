@@ -1,0 +1,32 @@
+$primary-color: #000;
+$secondary-color: #fff;
+$ff: "Libre Franklin", sans-serif;
+$gap: 20px;
+$phone-width: 700px;
+$tablet-width: 1000px;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h3 {
+  line-height: 1.25;
+  font-weight: 400;
+}
+h1 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
